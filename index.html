@@ -518,8 +518,8 @@
     
     // Anita's WhatsApp Number
     const WA_NUMBER_INT="918052533159";
-    // Anita's Google Sheet Script URL
-    const SCRIPT_URL="https://script.google.com/macros/s/AKfycby_fep9Cx9IOiEGhhbQ7o9Prn0uua6CW___qI4T6S8JBy1mkTpkDe9Oo_-NPaV1OlJf-g/exec";
+    // Anita's Google Sheet Script URL - UPDATED
+    const SCRIPT_URL="https://script.google.com/macros/s/AKfycbxKb0ulO1o3CX9VfWWnQDe62w5t3WmDfAf4CsubKIU1nHh_mCbzR_c4tMFkOZXeOA9fGA/exec";
 
     function openForm(source='site'){
         sourceInfo.value=source;
@@ -588,15 +588,9 @@
             `Hello Ma'am, I'm interested in your program.\n\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nProfession: ${profession}\n\nPlease share next steps. Thank you!`
         );
 
-        // Track Meta Pixel events before redirect
+        // ONLY CONTACT EVENT - LIKE PARI'S CODE (REDUCES COST)
         if(typeof fbq!=='undefined'){
             fbq('track','Contact');
-            fbq('track','Lead',{
-                content_name:'WhatsApp Form Submission',
-                content_category:'Lead Generation',
-                content_source:source
-            });
-            fbq('track','CompleteRegistration');
         }
 
         // Small delay to ensure pixel fires
